@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main>
+      <!-- STEPS NUMBER -->
+      <aside>
+        <section class="step-no-container">
+          <span>1</span>
+          <article>
+            <p class="step-no">step 1</p>
+            <p class="step-no-name">your info</p>
+          </article>
+        </section>
+
+        <section class="step-no-container">
+          <span>2</span>
+          <article>
+            <p class="step-no">step 2</p>
+            <p class="step-no-name">select plan</p>
+          </article>
+        </section>
+
+        <section class="step-no-container">
+          <span>3</span>
+          <article>
+            <p class="step-no">step 3</p>
+            <p class="step-no-name">add-ons</p>
+          </article>
+        </section>
+
+        <section class="step-no-container">
+          <span>4</span>
+          <article>
+            <p class="step-no">step 4</p>
+            <p class="step-no-name">summary</p>
+          </article>
+        </section>
+      </aside>
+
+      <!-- STEPS -->
+      <div class="steps-container">
+        <!-- <div class="steps-slider"> -->
+        <!-- PERSONAL INFO -->
+        <section class="personal-info-container">
+          <h1>Personal Info</h1>
+          <p class="info">
+            Please provide your name, email address, and phone number
+          </p>
+          <article class="label-error-container">
+            <label for="name">Name</label>
+            <span class="error"></span>
+          </article>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="e.g. Stephen King"
+          />
+
+          <article class="label-error-container">
+            <label for="email">Email Address</label>
+            <span class="error"></span>
+          </article>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="e.g. stephenking@lorem.com"
+          />
+
+          <article class="label-error-container">
+            <label for="name">Phone Number</label>
+            <span class="error"></span>
+          </article>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="e.g. +1 234 567 890"
+          />
+        </section>
+        <!-- END OF PERSONAL INFO -->
+
+        <!-- PLAN -->
+        <section class="plans-container">
+          <h1>Select your plan</h1>
+          <p class="info">You have the option of monthly or yearly billing</p>
+
+          <div class="plans">
+            <article>
+              <img src="./images/icon-arcade.svg" alt="Arcade" />
+              <div class="plan-info">
+                <p class="plan-name">Arcade</p>
+                <p class="plan-price">$9/mo</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/icon-advanced.svg" alt="Advanced" />
+              <div class="plan-info">
+                <p class="plan-name">Advanced</p>
+                <p class="plan-price">$9/mo</p>
+              </div>
+            </article>
+            <article>
+              <img src="./images/icon-pro.svg" alt="Pro" />
+              <div class="plan-info">
+                <p class="plan-name">Pro</p>
+                <p class="plan-price">$9/mo</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="bill-type">
+            <span class="monthly">Monthly</span>
+            <article class="switch">
+              <span class="switch-btn"></span>
+            </article>
+            <span class="yearly">Yearly</span>
+          </div>
+        </section>
+        <!-- END OF PLAN -->
+
+        <!-- ADDONS -->
+        <section class="addons-container">
+          <h1>Pick add-ons</h1>
+          <p class="info">Add-ons help enhance your gaming experience</p>
+          <div class="addon">
+            <article class="image-info">
+              <img src="./images/icon-checkmark.svg" alt="check" />
+              <!-- <input type="checkbox" name="check" id="check" /> -->
+              <article class="addon-info">
+                <h3>Online service</h3>
+                <p>Access to multiplayer games</p>
+              </article>
+            </article>
+            <p class="addon-price">+$1/mo</p>
+          </div>
+
+          <div class="addon">
+            <article class="image-info">
+              <img src="./images/icon-checkmark.svg" alt="check" />
+              <!-- <input type="checkbox" name="check" id="check" /> -->
+              <article class="addon-info">
+                <h3>Larger storage</h3>
+                <p>Extra 1TB of cloud save</p>
+              </article>
+            </article>
+            <p class="addon-price">+$2/mo</p>
+          </div>
+
+          <div class="addon">
+            <article class="image-info">
+              <img src="./images/icon-checkmark.svg" alt="check" />
+              <!-- <input type="checkbox" name="check" id="check" /> -->
+              <article class="addon-info">
+                <h3>Customizable profile</h3>
+                <p>Custom theme on your profile</p>
+              </article>
+            </article>
+            <p class="addon-price">+$2/mo</p>
+          </div>
+        </section>
+        <!-- END OF ADDONS -->
+
+        <!-- SUMMARY -->
+        <section class="summary-container">
+          <h1>Finishing up</h1>
+          <p class="info">Double-check everything looks OK before confirming</p>
+          <div class="selection-summary">
+            <div class="summary-plan">
+              <article class="summary-plan-name">
+                <span>Arcade (Monthly)</span>
+                <span>Change</span>
+              </article>
+              <article class="summary-plan-price">$9/mo</article>
+            </div>
+            <div class="divider"></div>
+            <div class="summary-addon"></div>
+          </div>
+
+          <div class="total">
+            <article class="total-word">Total <span>(per month)</span></article>
+            <article class="total-sum">87</article>
+          </div>
+        </section>
+        <!-- END OF SUMMARY -->
+
+        <!-- THANK YOU -->
+        <section>
+          <div class="thank-you-container">
+            <img src="./images/icon-thank-you.svg" alt="Thank You" />
+            <h1>Thank you !</h1>
+            <p class="info">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com
+            </p>
+          </div>
+        </section>
+        <!-- END OF THANK YOU -->
+
+        <!-- </div> -->
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+          <button class="prev">Go Back</button>
+          <button class="next">Next step</button>
+        </div>
+        <!-- END OF ACTION BUTTONS -->
+      </div>
+      <!-- END OF STEPS -->
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
