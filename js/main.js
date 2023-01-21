@@ -19,6 +19,9 @@ const summaryPlanPrice = getDOM(".summary-plan-price")
 const addOnSummary = getDOM(".summary-addon")
 const totalSum = getDOM(".total-sum")
 const totalWord = getDOM(".total-word span")
+const changePlan = getDOM(".summary-plan-name > :last-child")
+
+console.log(changePlan)
 
 let currentStep = 1
 const stepNoBg = "hsl(228, 100%, 84%)"
@@ -56,6 +59,10 @@ nextBtn.onclick = () => {
       break
   }
 
+  document.title = `Form | ${
+    currentStep < 5 ? `Step ${currentStep}` : "Sumbited"
+  } `
+
   console.log(currentStep)
   togglePrevStep()
   toggleNextStep()
@@ -70,6 +77,18 @@ prevBtn.onclick = () => {
   toggleNextStep()
   toggleStepsBg()
   toggleStepsContainer()
+
+  document.title = `Form | ${
+    currentStep < 5 ? `Step ${currentStep}` : "Sumbited"
+  } `
+}
+
+changePlan.onclick = () => {
+  currentStep = 2
+  toggleStepsBg()
+  toggleStepsContainer()
+  togglePrevStep()
+  toggleNextStep()
 }
 
 swithContainer.onclick = () => {
@@ -228,10 +247,14 @@ const getSummary = () => {
   summaryPlanType.innerHTML = `${usersSelection.plan.chosenPlan} (${usersSelection.plan.billType})`
   summaryPlanPrice.innerHTML = `$${usersSelection.plan.planCost()}`
   addOnSummary.innerHTML = ""
-  usersSelection.addon.name.forEach((addon, i) => {
-    let addons = createAddonDOM(addon, usersSelection.addon.price[i])
-    addOnSummary.appendChild(addons)
-  })
+  if (usersSelection.addon.name.length === 0) {
+    addOnSummary.innerHTML = `<h5 class="addon-cont">You didn't select any addon</h5>`
+  } else {
+    usersSelection.addon.name.forEach((addon, i) => {
+      let addons = createAddonDOM(addon, usersSelection.addon.price[i])
+      addOnSummary.appendChild(addons)
+    })
+  }
   const total = calculateTotal()
   totalSum.innerHTML =
     "+$" +
